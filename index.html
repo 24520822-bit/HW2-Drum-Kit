@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drum Kit Engine</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!--
+    CONTRACT
+    Mỗi pad PHẢI có:
+      data-key   = KeyboardEvent.code (ví dụ "KeyA")
+      data-sound = đường dẫn file âm thanh
+    Đổi phím = chỉ sửa data-key. Không đụng JS.
+  -->
+    <main class="kit">
+      <div class="pad" data-key="KeyA" data-sound="sounds/clap.wav">
+        <kbd>A</kbd><span>Clap</span>
+      </div>
+      <div class="pad" data-key="KeyS" data-sound="sounds/hihat.wav">
+        <kbd>S</kbd><span>Hi-hat</span>
+      </div>
+      <div class="pad" data-key="KeyD" data-sound="sounds/kick.wav">
+        <kbd>D</kbd><span>Kick</span>
+      </div>
+      <div class="pad" data-key="KeyF" data-sound="sounds/openhat.wav">
+        <kbd>F</kbd><span>Open hat</span>
+      </div>
+      <div class="pad" data-key="KeyG" data-sound="sounds/boom.wav">
+        <kbd>G</kbd><span>Boom</span>
+      </div>
+      <div class="pad" data-key="KeyH" data-sound="sounds/ride.wav">
+        <kbd>H</kbd><span>Ride</span>
+      </div>
+      <div class="pad" data-key="KeyJ" data-sound="sounds/snare.wav">
+        <kbd>J</kbd><span>Snare</span>
+      </div>
+      <div class="pad" data-key="KeyK" data-sound="sounds/tom.wav">
+        <kbd>K</kbd><span>Tom</span>
+      </div>
+      <div class="pad" data-key="KeyL" data-sound="sounds/tink.wav">
+        <kbd>L</kbd><span>Tink</span>
+      </div>
+    </main>
+
+    <section class="controls">
+      <button id="rec">Record</button>
+      <button id="stop" disabled>Stop</button>
+      <button id="play" disabled>Play</button>
+      <span id="status">Idle</span>
+    </section>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
